@@ -155,4 +155,37 @@
 </div>
 </div>
 
-</div></body></html>
+</div>
+        <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'https://n8n.ogn8n2507.site/webhook/01106218-7caf-4305-ad56-90d24b8204ca/chat',
+    
+    // Mensajes de bienvenida de tu bot
+    initialMessages: [
+      '¡Hola! 👋',
+      'Soy el asistente virtual de SaltaTech. ¿Cómo puedo ayudarte hoy con tu iPhone o tu próxima compra?'
+    ],
+    
+    // Textos de la interfaz en español
+    i18n: {
+      es: {
+        title: '¡Hola! 👋',
+        subtitle: 'Inicia un chat. Estamos para ayudarte.',
+        footer: '',
+        getStarted: 'Nueva Conversación',
+        inputPlaceholder: 'Escribe tu pregunta..',
+      },
+    },
+    defaultLanguage: 'es', // Usar español por defecto
+
+    // Opcional: Muestra una pantalla de bienvenida 
+    // en lugar de abrir el chat directamente
+    showWelcomeScreen: true 
+  });
+</script>
+</body></html>
+
