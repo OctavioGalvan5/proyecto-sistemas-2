@@ -1,166 +1,41 @@
 <!DOCTYPE html>
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SaltaTech</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#007AFF",
-                        "background-light": "#F5F5F7",
-                        "background-dark": "#101922",
-                        "text-primary-light": "#1D1D1F",
-                        "text-primary-dark": "#F5F5F7",
-                        "text-secondary-light": "#86868B",
-                        "text-secondary-dark": "#a1a1aa",
-                    },
-                    fontFamily: {
-                        display: ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                        lg: "1rem",
-                        xl: "1.5rem",
-                        full: "9999px",
-                    },
-                },
-            },
-        };
-    </script>
-<style>
-        .chat-powered-by {
-            display: none !important;
-        }                
-        .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-        }
-    </style>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Stack</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .image-stack {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .image-stack img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-10 py-3">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-2 text-text-primary-light dark:text-text-primary-dark">
-<span class="material-symbols-outlined text-2xl">
-                                
-                            </span>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">
-                                SaltaTech
-                            </h2>
-</div>
-<div class="hidden md:flex items-center gap-6">
-<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Inicio</a>
-<a class="text-sm font-medium leading-normal hover:text-primary" href="#">iPhone</a>
-<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Soporte</a>
-</div>
-</div>
-<div class="flex flex-1 justify-end items-center gap-4">
-<a class="text-sm font-medium leading-normal" href="#">
-<span class="material-symbols-outlined">shopping_cart</span>
-</a>
-<a class="text-sm font-medium leading-normal hidden md:inline-flex" href="#">
-<span class="material-symbols-outlined">account_circle</span>
-</a>
-<button class="hidden md:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-4 bg-primary text-white text-sm font-semibold leading-normal tracking-[-0.01em]">
-<span class="truncate">Mi Cuenta</span>
-</button>
-<button class="md:hidden flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</header>
-<main class="flex-1">
-<div class="flex flex-col items-center justify-center gap-12 px-4 py-16 md:py-24 lg:py-32">
-<div class="flex flex-col items-center gap-4 text-center">
-<h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-text-primary-light dark:text-text-primary-dark">Novedades Destacadas</h1>
-<p class="max-w-[700px] text-text-secondary-light dark:text-text-secondary-dark md:text-xl">Descubre los últimos lanzamientos con un diseño y rendimiento espectaculares.</p>
-</div>
-<div class="flex w-full max-w-6xl flex-col items-stretch justify-center gap-16 lg:flex-row lg:items-start lg:gap-8">
-<div class="relative flex flex-1 flex-col items-center justify-start gap-6 rounded-xl bg-gray-100 dark:bg-gray-800/50 p-8 pt-16 text-center">
-<img alt="iPhone 15 Pro in natural titanium color" class="h-auto w-4/5 max-w-[300px] object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC56HLwYd38g1F9-SSmY-WTCQ0njDRRow1hoZpufE_kZCOqGXDaSZUnJe7F1F0QiKfnGlfu43UVucx4EccD99CkVdF5KJuubuCOz9EyBIrxAnWGAnowMXxWU_TBNv2O0GEhRNMGySPJc6p5PTbCPd2yUoGBJCGNEMybpVbuLbgSbVIRT5xjyIKpuoa__TQ_IyQ7ata8rdK5uXybBCVsPz1VECNOCl28QbqhAmKsQ8PLdmmKAwhIDaVZjrdOKTvQd_45mQFoYI0fP60"/><div class="flex flex-col items-center gap-4">
-<div class="flex flex-col gap-1">
-<h3 class="text-3xl font-bold">iPhone 15 Pro</h3>
-<p class="text-lg text-text-secondary-light dark:text-text-secondary-dark">Titanio. Tan resistente. Tan ligero. Tan Pro.</p>
-</div>
-<p class="text-xl font-semibold">Desde $999</p>
-<button class="flex h-11 w-full max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-6 text-base font-semibold text-white transition-colors hover:bg-primary/90">Añadir al Carrito</button>
-</div>
-</div>
-<div class="relative flex flex-1 flex-col items-center justify-start gap-6 rounded-xl bg-gray-100 dark:bg-gray-800/50 p-8 pt-16 text-center">
-<img alt="iPhone 15 in blue color" class="h-auto w-4/5 max-w-[300px] object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4-iiXY65se-As_uOluIjRu2R4nRtt7HvjSFThN_3ZyDiF0nwHCQUUm1FUJ6gFuzQQij6ci0wuRrIftJb7xmbr7RcQjhM0JhHtJq3K-TkwYd6XrNyBf79twUzEmYFH3eaXqtNE5Thdyf-8mKOzEs2h8dmjbRAI1e0j26qos27xkRan3Dppx4LxCem1nyfjEdLO9xDfLRU8ymw7VvxFZCwwKx95XB9xXJa-PUB2coXH2yZfMeRFFPxanMbKMdTD7nARonfl2-UIRi4"/><div class="flex flex-col items-center gap-4">
-<div class="flex flex-col gap-1">
-<h3 class="text-3xl font-bold">iPhone 15</h3>
-<p class="text-lg text-text-secondary-light dark:text-text-secondary-dark">Potencia. Belleza. Durabilidad.</p>
-</div>
-<p class="text-xl font-semibold">Desde $799</p>
-<button class="flex h-11 w-full max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-6 text-base font-semibold text-white transition-colors hover:bg-primary/90">Añadir al Carrito</button>
-</div>
-</div>
-</div>
-</div>
-<div class="px-4 py-8">
-<div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-6">
-<label class="flex flex-col min-w-40 h-12 w-full md:w-1/3 max-w-md">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-<div class="text-text-secondary-light dark:text-text-secondary-dark flex border border-gray-300 dark:border-gray-700 bg-white dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary-light dark:text-text-primary-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-background-dark h-full placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Busca tu iPhone favorito" value=""/>
-</div>
-</label>
-</div>
-</div>
-</main>
-<footer class="border-t border-gray-200 dark:border-gray-700 mt-12 py-8 px-4 sm:px-10">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div class="flex flex-col gap-4">
-<h3 class="font-semibold">Comprar y aprender</h3>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Tienda</a>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">iPhone</a>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Accesorios</a>
-</div>
-<div class="flex flex-col gap-4">
-<h3 class="font-semibold">Cuenta</h3>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Administrar tu Apple ID</a>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Cuenta de la Apple Store</a>
-</div>
-<div class="flex flex-col gap-4">
-<h3 class="font-semibold">Para la empresa</h3>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Apple y la empresa</a>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Comprar para la empresa</a>
-</div>
-<div class="flex flex-col gap-4">
-<h3 class="font-semibold">Acerca de Apple</h3>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Newsroom</a>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Inversores</a>
-<a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary" href="#">Contacto</a>
-</div>
-</div>
-<div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-text-secondary-light dark:text-text-secondary-dark">
-<p>Copyright © 2024 iPhone Store Inc. Todos los derechos reservados.</p>
-<div class="flex justify-center gap-4 mt-4">
-<a class="hover:text-primary" href="#">Política de Privacidad</a>
-<a class="hover:text-primary" href="#">Términos de Uso</a>
-<a class="hover:text-primary" href="#">Ventas y Reembolsos</a>
-</div>
-</div>
-</footer>
-</div>
-</div>
-</div>
-
-</div>
+<body>
+  <div class="image-stack">
+    <img src="https://i.ibb.co/fzdjC6jq/navbar.png" alt="Navbar">
+    <img src="https://i.ibb.co/yndgV4zF/foto-iphone-17.png" alt="iPhone 17">
+    <img src="https://i.ibb.co/C50cHwBc/iphoneair.png" alt="iPhone Air">
+    <img src="https://i.ibb.co/6J1CqNKc/footer.png" alt="Footer">
+  </div>
         <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-
 <script type="module">
   import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
@@ -190,7 +65,11 @@
     showWelcomeScreen: true 
   });
 </script>
-</body></html>
+</body>
+</html>
+
+
+
 
 
 
